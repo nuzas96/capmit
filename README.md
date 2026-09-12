@@ -16,10 +16,10 @@
 
 ## Team
 
-- Team Name: `TBD`
+- Team Name: `llaollao`
 - Team Members:
-  - `TBD`
-  - `TBD`
+  - Muhammad Nuzhmi Asyraf bin Rozali
+  - Nur Husna binti Mohamed Din
 
 ## 1. Project Overview
 
