@@ -180,3 +180,5 @@
   .summary img { width:48px; }
   .summaryTitle { font-size:27px; }
 }
+
+@media (min-width:768px) { .intro { min-height:110px; margin-bottom:12px; } }
