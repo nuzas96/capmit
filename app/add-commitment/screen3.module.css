@@ -70,3 +70,35 @@
 @media(min-width:480px) { .title { margin-bottom:40px; } .templates button { padding-inline:12px; } .loadComposition { grid-template-columns:minmax(0,1fr) 135px; } .loadRow { grid-template-columns:29px 60px minmax(30px,1fr) 57px; gap:8px; } .timeline { height:215px; } .meeting h4 { font-size:24px; line-height:27px; } .meeting p { font-size:14px; } .timeField input { flex-basis:58px; } }
 @media(max-width:359px) { .details { grid-template-columns:1fr; } .calendar { margin-top:12px; } .meeting h4 { font-size:25px; } .loadComposition { grid-template-columns:1fr; } .autofill { margin-left:50px; margin-top:24px; } .autofill > img { left:-48px; top:5px; } .title h1 { font-size:36px; } }
 @media(forced-colors:active) { .ruleControls input { appearance:auto; } .ruleControls input::after { display:none; } }
+
+/* Desktop comfort within the shared focused column. */
+@media (min-width:768px) {
+  .panel { padding:20px; margin-bottom:22px; }
+  .panel h2 { font-size:32px; line-height:38px; margin-bottom:16px; }
+  .templates { gap:10px; }
+  .templates button { font-size:15px; line-height:22px; padding:10px 12px; }
+  .details { gap:24px; }
+  .fields label, .timeGroup { font-size:15px; line-height:22px; margin-top:14px; }
+  .fields input, .fields textarea, .timeField { font-size:16px; line-height:24px; padding:10px; margin-top:6px; }
+  .fields .timeField { padding:10px; gap:6px; }
+  .timeField input { padding:0; margin:0; }
+  .calendar { padding:14px 12px 18px; }
+  .calendar h3 { font-size:30px; line-height:36px; padding-bottom:14px; }
+  .timeline { height:250px; margin-top:14px; }
+  .hour { font-size:14px; }
+  .meeting { left:54px; padding:14px 12px; }
+  .proposed { font-size:14px; line-height:20px; }
+  .meeting h4 { font-size:28px; line-height:32px; margin:12px 0; }
+  .meeting p { font-size:15px; line-height:22px; }
+  .support { font-size:15px; line-height:22px; margin-bottom:24px; }
+  .loadComposition { grid-template-columns:minmax(0,1fr) 170px; gap:24px; }
+  .loadRow { grid-template-columns:29px 65px minmax(30px,1fr) 62px; gap:10px; min-height:54px; font-size:16px; }
+  .loadRow strong { font-size:15px; line-height:22px; }
+  .autofill { padding:16px 12px; }
+  .autofill h3 { font-size:26px; line-height:30px; }
+  .autofill p { font-size:14px; line-height:22px; }
+  .ruleControls { gap:10px; }
+  .ruleControls label { padding:10px 12px; gap:8px; font-size:15px; line-height:22px; }
+  .rulesNote, .modelNote { margin-top:16px; }
+  .cta { font-size:32px; line-height:38px; }
+}

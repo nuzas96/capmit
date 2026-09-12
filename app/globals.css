@@ -248,7 +248,6 @@
 @media (min-width: 768px) {
   main[data-capmit-shell] {
     --shell-width: 900px;
-    --shell-focus-width: 600px;
     --shell-gutter: 24px;
     --shell-section-gap: 24px;
     --shell-heading-gap: 32px;
@@ -283,36 +282,6 @@
     margin-left: 0;
   }
 
-  main[data-capmit-shell="focused"] > h1,
-  main[data-capmit-shell="focused"] > [data-shell-title] {
-    width: 100%;
-    max-width: var(--shell-focus-width);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Keep the underline attached to the text inside the wider title column. */
-  main[data-capmit-shell="focused"] > [data-shell-title] {
-    display: grid;
-    grid-template-columns: max-content minmax(0, 1fr);
-  }
-  main[data-capmit-shell="focused"] > [data-shell-title] > h1,
-  main[data-capmit-shell="focused"] > [data-shell-title] > svg {
-    grid-area: 1 / 1;
-  }
-  main[data-capmit-shell="focused"] > [data-shell-title] > svg {
-    position: static;
-    justify-self: end;
-    align-self: end;
-    transform: translateY(100%);
-  }
-
-  main[data-capmit-shell="focused"] > :not(header, footer, h1, [data-shell-title], .sr-only) {
-    width: 100%;
-    max-width: var(--shell-focus-width);
-    margin-inline: auto;
-  }
-
   main[data-capmit-shell="focused"] > .trail-area {
     margin-bottom: var(--shell-section-gap);
   }
@@ -323,6 +292,45 @@
     text-align: center;
   }
 
+}
+
+/* Screen 4 desktop comfort; shared shell and mobile styles stay intact. */
+@media (min-width: 768px) {
+  .planner .calendar { padding:20px; }
+  .planner .day-heading { margin-bottom:26px; }
+  .planner .day-heading h2 { font-size:32px; line-height:38px; }
+  .planner .day-heading > span { font-size:15px; line-height:22px; max-width:180px; }
+  .planner .timetable { height:184px; margin-bottom:20px; }
+  .planner .meeting { padding:16px 20px; }
+  .planner .meeting h3 { font-size:30px; line-height:36px; }
+  .planner .meeting p, .planner .meeting-fit { font-size:15px; line-height:22px; }
+  .planner .meeting-fit { max-width:220px; }
+  .planner .consequence-connector { top:268px; height:calc(100% - 257px); }
+  .planner .insight-callout { padding:24px 20px; gap:16px; margin-block:20px; }
+  .planner .signature { font-size:30px; line-height:36px; }
+  .planner .preview-instruction { font-size:15px; line-height:23px; max-width:360px; }
+  .planner .analysis-region { padding:22px 20px 4px; }
+  .planner .analysis-heading { min-height:76px; padding-right:100px; }
+  .planner .analysis-title { font-size:32px; line-height:38px; max-width:340px; }
+  .planner .analysis-note { right:0; top:-12px; width:88px; font-size:17px; line-height:20px; }
+  .planner .comparison-heading { font-size:15px; line-height:22px; padding-top:14px; }
+  .planner .load-row { padding-top:24px; }
+  .planner .comparison-values { font-size:22px; line-height:30px; }
+  .planner .load-track { margin-top:8px; }
+  .planner .time-caption { padding-top:10px; font-size:15px; line-height:22px; }
+  .planner .recovery { margin-top:28px; padding-top:22px; }
+  .planner .remaining-label { font-size:15px; line-height:22px; margin-bottom:10px; }
+  .planner .recovery .comparison-values { font-size:40px; line-height:48px; grid-template-columns:minmax(0,1fr) 90px 84px; }
+  .planner #recovery-title { font-size:32px; line-height:38px; }
+  .planner .recovery-description { font-size:15px; line-height:23px; margin-top:6px; }
+  .planner .recovery-chart { margin-top:28px; height:170px; width:calc(100% - 110px); }
+  .planner .baseline-marker small, .planner .current-marker-label small,
+  .planner .recovery-floor::before, .planner .recovery-scale,
+  .planner .floor-caption { font-size:15px; line-height:22px; }
+  .planner .shortfall-note { font-size:18px; line-height:26px; }
+  .planner .rest-note { width:98px; font-size:20px; line-height:23px; bottom:54px; }
+  .planner .explanation { font-size:15px; margin-top:18px; }
+  .planner .explanation p { line-height:24px; }
 }
 
 /* Keep the three recovery annotations distinct on narrow phones. */
