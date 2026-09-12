@@ -172,11 +172,9 @@ The actual seven-screen journey connects an apparently free Wednesday slot to an
 
 ### 2.3 Mentor Consultation
 
-| Date | Mentor | Feedback | What We Changed |
-| --- | --- | --- | --- |
-| TBD | TBD | Mentor consultation not yet documented | TBD |
+**Mentor Consultation: Not completed during the Prototype Phase. No mentor feedback is claimed.**
 
-> This section will be updated only with actual mentor feedback received by the team.
+Available mentorship slots were already full when the team attempted to arrange a consultation. Therefore, this submission does not attribute any design or product decisions to mentor feedback.
 
 ## 3. Design & Prototype
 
@@ -234,19 +232,75 @@ Capmit presents two scenario choices:
 
 ### Prototype Screens
 
-The reference column links **approved visual references**; the capture column links **actual implementation screenshots** captured from the local app at 390px viewport width. Device frames in reference images are not part of the implementation.
+The implementation captures below were taken from the [live production prototype](https://capmit.vercel.app) at a 1280 × 900 desktop viewport with deviceScaleFactor 1. They are full-page screenshots of the final Prototype Phase build. State-dependent screens were captured in the intended Aina demo flow: Screen 4 shows the proposed Hackathon meeting impact, Screen 5 shows Balanced Week selected, and Screen 7 shows the applied Balanced Week result. Reduced motion was used to capture stable final states after fonts and images loaded.
 
-Screen 4 is captured with the commitment included and the final preview visible. Screen 5 shows Balanced Week selected; Screen 7 shows the predefined Balanced Week result. Captures use reduced motion to record stable final states and are full-page images, so they can be opened at original size.
+The table links **approved visual references**; the inline images below show **actual implemented production captures**. Device frames in the references are not part of the implementation.
 
-| Screen | Implemented route | Approved visual reference | Implementation capture |
-| --- | --- | --- | --- |
-| 1. Home / Weekly Capacity | `/home` | [View reference](public/references/capmit-screen1-target.png) | [View actual screen](public/screenshots/screen1.png) |
-| 2. Your Week | `/your-week` | [View reference](public/references/capmit-screen2-target.png) | [View actual screen](public/screenshots/screen2.png) |
-| 3. Add Commitment | `/add-commitment` | [View reference](public/references/capmit-screen3-target.png) | [View actual screen](public/screenshots/screen3.png) |
-| 4. Can I Take This On? | `/capacity-check` | [View reference](public/references/capmit-screen4-target.png) | [View actual screen](public/screenshots/screen4.png) |
-| 5. What Has To Give? | `/trade-offs` | [View reference](public/references/capmit-screen5-target.png) | [View actual screen](public/screenshots/screen5.png) |
-| 6. Why These Changes? | `/why-these-changes` | [View reference](public/references/capmit-screen6-target.png) | [View actual screen](public/screenshots/screen6.png) |
-| 7. Rebalanced Week | `/rebalanced-week` | [View reference](public/references/capmit-screen7-target.png) | [View actual screen](public/screenshots/screen7.png) |
+| Screen | Approved visual reference |
+| --- | --- |
+| 1. Home / Weekly Capacity | [View reference](public/references/capmit-screen1-target.png) |
+| 2. Your Week | [View reference](public/references/capmit-screen2-target.png) |
+| 3. Add Commitment | [View reference](public/references/capmit-screen3-target.png) |
+| 4. Can I Take This On? | [View reference](public/references/capmit-screen4-target.png) |
+| 5. What Has To Give? | [View reference](public/references/capmit-screen5-target.png) |
+| 6. Why These Changes? | [View reference](public/references/capmit-screen6-target.png) |
+| 7. Rebalanced Week | [View reference](public/references/capmit-screen7-target.png) |
+
+#### Screen 1 — Home / Weekly Capacity
+
+Route: `/home`
+
+Aina’s baseline week shows capacity across life dimensions, with 22% recovery remaining above the 15% Recovery Floor.
+
+<img src="public/screenshots/screen1.png" alt="Capmit Screen 1 — Home / Weekly Capacity" width="720">
+
+#### Screen 2 — Your Week
+
+Route: `/your-week`
+
+Existing commitments explain why Wednesday’s apparently open 7–11 PM slot does not tell the whole capacity story.
+
+<img src="public/screenshots/screen2.png" alt="Capmit Screen 2 — Your Week" width="720">
+
+#### Screen 3 — Add Commitment
+
+Route: `/add-commitment`
+
+Aina considers a Hackathon team meeting on Wednesday, 7:00 PM–11:00 PM, with its expected load and commitment rules visible before the decision.
+
+<img src="public/screenshots/screen3.png" alt="Capmit Screen 3 — Add Commitment" width="720">
+
+#### Screen 4 — Can I Take This On?
+
+Route: `/capacity-check`
+
+The activated preview shows Time 87% → 103%, Mental 72% → 81%, Social 61% → 84%, and Recovery 22% → 9%. Recovery falls 6 points below the fixed 15% floor; no changes have been applied.
+
+<img src="public/screenshots/screen4.png" alt="Capmit Screen 4 — Can I Take This On?" width="720">
+
+#### Screen 5 — What Has To Give?
+
+Route: `/trade-offs`
+
+Balanced Week is selected: peak time is 89% and recovery is 17%, with three supporting changes—moving laundry, splitting the assignment block, and deferring optional club admin.
+
+<img src="public/screenshots/screen5.png" alt="Capmit Screen 5 — What Has To Give?" width="720">
+
+#### Screen 6 — Why These Changes?
+
+Route: `/why-these-changes`
+
+The explanation links each proposed trade-off to flexibility, splitting, or optionality, while keeping recovery protected. Aina reviews these reasons before approving Balanced Week.
+
+<img src="public/screenshots/screen6.png" alt="Capmit Screen 6 — Why These Changes?" width="720">
+
+#### Screen 7 — Rebalanced Week
+
+Route: `/rebalanced-week`
+
+After user approval in the local demo, Balanced Week includes the meeting with 17% recovery remaining. Time is within capacity, Recovery Floor violations are cleared, and deadline violations remain at zero.
+
+<img src="public/screenshots/screen7.png" alt="Capmit Screen 7 — Rebalanced Week" width="720">
 
 ## 4. What Makes It Different
 
@@ -459,7 +513,7 @@ public/
   doodles/                    # Standalone SVG illustrations
   references/                 # Seven approved visual targets
   ideation/                   # Five SVG concept/process diagrams
-  screenshots/                # Seven actual 390px implementation captures
+  screenshots/                # Seven full-page production desktop captures
 AGENTS.md                     # Stable project constraints
 README.md
 package.json
@@ -489,7 +543,7 @@ Prototype Phase:
 - GitHub repository: Complete
 - Public deployment: Complete
 - Ideation board images: Complete
-- Mentor consultation documentation: Pending
+- Mentor consultation: Not completed during the Prototype Phase; no mentor feedback claimed
 - Presentation slides: Pending
 - Video: Pending
 
