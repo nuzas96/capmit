@@ -74,7 +74,12 @@
 .cta .accent:first-child { transform:rotate(180deg); }
 .secondary { display:inline-flex; align-items:center; min-height:44px; font-size:17px; margin-top:14px; text-decoration:underline; text-underline-offset:4px; }
 .footer p { font-size:13px; line-height:21px; margin-top:3px; }
-@media(min-width:680px) { .page h1 { font-size:56px; line-height:62px; width:fit-content; } .dogNote { margin-top:0; } .hero { padding:26px; } .hero h2 { font-size:38px; } .comparisons { margin-right:180px; padding-right:15px; } .compareNote { position:absolute; right:23px; top:230px; width:150px; text-align:left; } .explanation { margin-top:25px; } .equation { margin:0 10px 20px; } .loadRow { grid-template-columns:37px 92px minmax(0,1fr) 62px; gap:13px; } .loadRow strong { font-size:27px; } .recoveryBody { display:grid; grid-template-columns:260px 1fr; align-items:center; gap:20px; } .recovery .scale { margin-top:0; } .protected { margin-top:0; } .preview li { font-size:16px; } }
+@media(min-width:768px) { .page h1 { font-size:56px; line-height:62px; width:fit-content; } .dogNote { margin-top:0; } .hero { padding:26px; } .hero h2 { font-size:38px; } .comparisons { margin-right:180px; padding-right:15px; } .compareNote { position:absolute; right:23px; top:230px; width:150px; text-align:left; } .explanation { margin-top:25px; } .equation { margin:0 10px 20px; } .loadRow { grid-template-columns:37px 92px minmax(0,1fr) 62px; gap:13px; } .loadRow strong { font-size:27px; } .recoveryBody { display:grid; grid-template-columns:260px 1fr; align-items:center; gap:20px; } .recovery .scale { margin-top:0; } .protected { margin-top:0; } .preview li { font-size:16px; } }
 @media(max-width:359px) { .page h1 { font-size:41px; line-height:47px; } .panel h2 { font-size:30px; } .loadRow { grid-template-columns:28px 59px minmax(0,1fr) 44px; gap:6px; font-size:15px; } .loadRow .icon { width:28px; } .loadRow strong { font-size:20px; } .compareRow { grid-template-columns:27px minmax(0,1fr) 44px; gap:8px; } .compareRow > .icon { width:27px; } .compareRow strong { font-size:23px; } .insight { grid-template-columns:35px minmax(0,1fr); gap:10px; padding-inline:12px; } .insight > .icon { width:35px; } .cta { font-size:29px; gap:6px; } }
 
 @media (min-width:768px) { .dogNote { margin-bottom:12px; position:relative; top:6px; } }
+
+@media (max-width:767px) {
+  .cta { font-size:30px; line-height:36px; min-height:60px; gap:6px; }
+  .footer p { font-size:14px; line-height:22px; }
+}

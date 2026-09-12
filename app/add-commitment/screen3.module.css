@@ -102,3 +102,21 @@
   .rulesNote, .modelNote { margin-top:16px; }
   .cta { font-size:32px; line-height:38px; }
 }
+
+@media (max-width:767px) {
+  .teamNote { position:static; justify-content:flex-end; margin-bottom:12px; }
+  .panel h2 { font-size:30px; line-height:36px; }
+  .details { grid-template-columns:minmax(0,1fr); }
+  .calendar { margin-top:12px; }
+  .fields input, .fields textarea { font-size:16px; line-height:24px; }
+  .loadComposition { grid-template-columns:minmax(0,1fr); }
+  .loadRow { grid-template-columns:28px 60px minmax(0,1fr) 60px; gap:8px; min-height:48px; }
+  .loadRow strong, .autofill p, .ruleControls label, .hour, .proposed { font-size:14px; }
+  .autofill { margin:32px 0 0; padding:16px; }
+  .autofill > img { left:auto; right:16px; top:-33px; }
+  .meeting { left:52px; }
+  .meeting h4 { font-size:26px; line-height:30px; }
+  .meeting p { font-size:14px; line-height:20px; }
+  .ruleControls label { padding:8px; }
+  .cta { font-size:30px; line-height:36px; min-height:60px; gap:6px; }
+}

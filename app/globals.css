@@ -339,3 +339,31 @@
   .analysis-region .current-marker-label { top: -48px; }
   .analysis-region .floor-ring { width: 48px; }
 }
+
+/* Mobile shell: desktop geometry and component rules remain unchanged. */
+@media (max-width:767px) {
+  main[data-capmit-shell] {
+    --mobile-title-size:42px;
+    --mobile-title-line:48px;
+    width:100%; max-width:none; margin-inline:auto; padding:18px 16px 30px;
+  }
+  main[data-capmit-shell] > header { align-items:baseline; margin-bottom:28px; }
+  main[data-capmit-shell] > header > :first-child { font-size:40px; line-height:44px; }
+  main[data-capmit-shell] > header > :last-child { font-size:25px; line-height:30px; }
+  main[data-capmit-shell] h1 { font-size:var(--mobile-title-size); line-height:var(--mobile-title-line); font-weight:600; width:fit-content; max-width:100%; margin-bottom:28px; }
+  main[data-capmit-shell] > [data-shell-title] { width:fit-content; max-width:100%; margin-bottom:28px; }
+  main[data-capmit-shell] > [data-shell-title] h1 { margin-bottom:0; }
+  main[data-capmit-shell] > [data-shell-title] > svg { position:absolute; right:0; bottom:-12px; margin-left:0; }
+  main[data-capmit-shell] > footer { width:100%; margin-top:28px; text-align:center; }
+  main[data-capmit-shell] > footer p { font-size:14px; line-height:22px; }
+  .planner .next-action { font-size:30px; line-height:36px; min-height:60px; gap:6px; }
+  .planner .analysis-title { font-size:30px; line-height:36px; }
+  .planner .analysis-heading { min-height:80px; }
+  .planner .trail-area { padding-top:32px; }
+  .planner .consequence-connector { top:250px; height:calc(100% - 239px); }
+}
+@media (min-width:360px) and (max-width:389px) {
+  .analysis-region .recovery-chart { margin-top:62px; }
+  .analysis-region .current-marker-label { top:-48px; }
+  .analysis-region .floor-ring { width:48px; }
+}

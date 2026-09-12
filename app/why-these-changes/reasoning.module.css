@@ -80,7 +80,7 @@
 .footer > p { font-size:13px; line-height:21px; margin:10px 0; }
 .back,.quiet { display:flex; align-items:center; justify-content:center; min-height:44px; width:fit-content; margin:auto; font-size:17px; text-decoration:underline; text-underline-offset:4px; }
 .quiet { font-size:15px; margin-top:5px; }
-@media(min-width:660px) {
+@media(min-width:768px) {
   .page h1 { font-size:56px; line-height:62px; width:fit-content; }
   .intro { display:flex; justify-content:space-between; gap:20px; align-items:center; }
   .pathNote { padding-top:0; }
@@ -99,3 +99,8 @@
   .principle h2 br { display:none; }
 }
 @media(max-width:359px) { .page h1 { font-size:40px; line-height:47px; } .pathNote { gap:10px; } .pathNote span { font-size:21px; } .row h3 { font-size:28px; } .principle { grid-template-columns:48px minmax(0,1fr); gap:10px; padding-inline:12px; } .person { width:48px; } .cta { font-size:28px; gap:4px; } }
+
+@media (max-width:767px) {
+  .cta { font-size:30px; line-height:36px; min-height:60px; gap:6px; }
+  .footer p { font-size:14px; line-height:22px; }
+}
