@@ -182,7 +182,7 @@ The actual seven-screen journey connects an apparently free Wednesday slot to an
 
 ### Prototype
 
-Capmit is implemented as a mobile-first interactive Next.js prototype. Start at `/home`; the root route `/` is the capacity-check screen.
+Capmit is implemented as a mobile-first interactive Next.js prototype. The root route `/` redirects to `/home`, where the full journey starts. Screen 4 lives at `/capacity-check`.
 
 ```mermaid
 flowchart TD
@@ -243,7 +243,7 @@ Screen 4 is captured with the commitment included and the final preview visible.
 | 1. Home / Weekly Capacity | `/home` | [View reference](public/references/capmit-screen1-target.png) | [View actual screen](public/screenshots/screen1.png) |
 | 2. Your Week | `/your-week` | [View reference](public/references/capmit-screen2-target.png) | [View actual screen](public/screenshots/screen2.png) |
 | 3. Add Commitment | `/add-commitment` | [View reference](public/references/capmit-screen3-target.png) | [View actual screen](public/screenshots/screen3.png) |
-| 4. Can I Take This On? | `/` | [View reference](public/references/capmit-screen4-target.png) | [View actual screen](public/screenshots/screen4.png) |
+| 4. Can I Take This On? | `/capacity-check` | [View reference](public/references/capmit-screen4-target.png) | [View actual screen](public/screenshots/screen4.png) |
 | 5. What Has To Give? | `/trade-offs` | [View reference](public/references/capmit-screen5-target.png) | [View actual screen](public/screenshots/screen5.png) |
 | 6. Why These Changes? | `/why-these-changes` | [View reference](public/references/capmit-screen6-target.png) | [View actual screen](public/screenshots/screen6.png) |
 | 7. Rebalanced Week | `/rebalanced-week` | [View reference](public/references/capmit-screen7-target.png) | [View actual screen](public/screenshots/screen7.png) |
@@ -416,7 +416,7 @@ npm install
 npm run dev
 ```
 
-Then open [http://localhost:3000/home](http://localhost:3000/home). The development server binds to `127.0.0.1`; [http://127.0.0.1:3000/home](http://127.0.0.1:3000/home) is also available. Start at `/home` to follow the whole journey.
+Then open [http://localhost:3000/home](http://localhost:3000/home). The development server binds to `127.0.0.1`; [http://127.0.0.1:3000/home](http://127.0.0.1:3000/home) is also available. Opening `/` redirects to `/home` to start the whole journey; the capacity check is at `/capacity-check`.
 
 The actual scripts in `package.json` are:
 
@@ -445,7 +445,9 @@ No backend credentials or environment secrets are needed for the demo. Font fetc
 app/
   layout.tsx                  # Shared document and fonts
   globals.css                 # Tokens, shared styling, capacity-check styling
-  page.tsx                    # Screen 4: capacity check at /
+  page.tsx                    # Redirects / to /home
+  capacity-check/
+    page.tsx                  # Screen 4: Can I Take This On?
   demo-preview.ts             # Local preview state
   home/                       # Screen 1
   your-week/                  # Screen 2

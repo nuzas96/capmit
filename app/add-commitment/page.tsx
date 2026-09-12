@@ -69,6 +69,6 @@ export default function AddCommitment() {
       <div className={s.ruleControls}>{["Optional", "Fixed time", "Not splittable"].map((rule, i) => <label key={rule}><input type="checkbox" checked={rules[i]} readOnly aria-disabled="true" onClick={event => event.preventDefault()} /><span>{rule}</span></label>)}</div>
       <p className={s.rulesNote}><Arrow />set for this meeting</p>
     </section>
-    <footer className={s.footer}><Link href="/" className={s.cta} onClick={() => setDemoPreview(false)}><Accent />Can I take this on?<Accent /></Link><a href="#expected-load" className={s.secondary}>Review load details</a></footer>
+    <footer className={s.footer}><Link href="/capacity-check" className={s.cta} onClick={() => setDemoPreview(false)}><Accent />Can I take this on?<Accent /></Link><a href="#expected-load" className={s.secondary}>Review load details</a></footer>
   </main>;
 }

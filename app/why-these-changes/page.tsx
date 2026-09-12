@@ -40,6 +40,6 @@ export default function WhyTheseChanges() {
       <aside className={s.marginNote}><span>{row.note}<br />→ {row.rule}</span><Arrow /></aside>
     </article>)}</section>
     <aside className={s.principle}><Frame /><svg className={s.person} viewBox="0 0 105 125" aria-hidden="true"><path d="M26 78 C-5 59 7 11 38 9 C78 5 86 54 62 73 M24 79 Q10 88 9 115 M62 73 Q70 83 75 94 L86 81 Q91 75 96 81 Q104 92 87 107 Q74 120 55 98 M37 47 Q42 54 49 46 M53 97 L55 115 M90 28 L96 35 L104 21" /></svg><div><h2>Capmit proposes.<br /><span className={s.highlight}>You decide.</span><Accent /></h2><p>These are recommendations, not automatic changes.</p></div></aside>
-    <footer className={s.footer}><Link href="/rebalanced-week" className={s.cta} aria-describedby="apply-note" data-plan="balanced"><Accent />Apply Balanced Week<Accent /></Link><p id="apply-note">Applying this plan comes next. No changes applied.</p><Link href="/trade-offs" className={s.back}>Back to trade-offs</Link><Link href="/" className={s.quiet}>Review capacity again</Link></footer>
+    <footer className={s.footer}><Link href="/rebalanced-week" className={s.cta} aria-describedby="apply-note" data-plan="balanced"><Accent />Apply Balanced Week<Accent /></Link><p id="apply-note">Applying this plan comes next. No changes applied.</p><Link href="/trade-offs" className={s.back}>Back to trade-offs</Link><Link href="/capacity-check" className={s.quiet}>Review capacity again</Link></footer>
   </main>;
 }
