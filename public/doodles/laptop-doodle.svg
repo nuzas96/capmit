@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="96" viewBox="0 0 120 96" role="img" aria-labelledby="title">
+  <title id="title">A simple open laptop drawn in ink</title>
+  <g fill="none" stroke="#23352D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M29 12Q28 8 33 9L105 13Q109 13 108 18L98 64L20 60Z"/>
+    <path d="M36 17L100 21L92 55L28 52Z"/>
+    <path d="M20 60L7 77Q6 79 11 80L84 88L111 71L98 64"/>
+    <path d="M7 78L8 85L85 93L111 77L111 71M84 88L85 93"/>
+    <path d="M28 65L91 69M40 73L65 75L61 80L36 77Z"/>
+    <path d="M53 29L46 35L51 41M68 28L61 43M76 31L82 37L74 43"/>
+  </g>
+</svg>

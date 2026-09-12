@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="160" viewBox="0 0 128 160" role="img" aria-labelledby="title">
+  <title id="title">A pondering student with a hand under their chin and a small thought cloud</title>
+  <g fill="none" stroke="#23352D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- A small thought cloud, separate from the student's silhouette. -->
+    <path d="M84 30C75 32 72 24 77 19C71 10 82 5 88 10C91 1 104 5 104 12C115 9 123 19 116 26C116 35 103 38 98 32C93 38 85 36 84 30Z"/>
+    <path d="M77 40L78 41M72 47L72 48"/>
+    <!-- Soft head shape and a single swept fringe. -->
+    <path d="M39 99C23 91 18 75 23 61C28 44 43 38 57 42C75 46 84 63 78 80C76 87 72 92 66 95"/>
+    <path d="M24 61C36 59 43 49 47 44M45 51C52 57 62 59 72 58"/>
+    <path d="M35 67L40 65M58 65L63 67"/>
+    <path d="M39 73L39 76M60 73L60 76M51 78L49 83L53 84M49 92Q54 89 59 92"/>
+    <!-- Open shoulders, with one bent forearm leading to the chin. -->
+    <path d="M36 99L35 107C23 109 15 123 14 146M68 101L72 109C85 116 88 132 88 148"/>
+    <path d="M35 107Q40 116 49 116M63 109L70 111"/>
+    <path d="M30 143C35 127 44 115 48 105L48 98Q47 94 51 94Q55 94 55 99L56 101L61 94Q64 91 67 94Q69 96 67 100L61 110C57 123 49 139 43 146Q37 153 31 147"/>
+    <path d="M46 111L57 116M73 129L75 147"/>
+  </g>
+</svg>

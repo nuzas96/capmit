@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="92" viewBox="0 0 120 92" role="img" aria-labelledby="title">
+  <title id="title">A small floppy-eared dog peeking over the planner</title>
+  <g fill="none" stroke="#23352D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M30 62C23 53 22 39 27 27C33 12 46 8 60 9C78 8 91 20 93 36C96 48 92 60 87 65"/>
+    <path d="M30 24C19 22 9 41 8 55C7 68 17 72 25 61M89 24C102 26 111 43 112 57C113 71 103 73 95 63"/>
+    <path d="M41 42L41 46M78 42L78 46M53 51Q60 48 66 52L60 57Z M60 57L60 61M60 61Q55 67 50 61M60 61Q65 67 70 61"/>
+    <path d="M30 67C20 67 17 83 26 85L42 85C50 82 45 66 37 67Z M76 68C67 69 65 82 73 85L91 84C98 79 91 65 83 68Z"/>
+    <path d="M28 78L28 84M36 78L36 84M77 78L77 84M85 77L85 84M46 77Q60 81 68 77"/>
+  </g>
+</svg>

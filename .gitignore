@@ -1,0 +1,23 @@
+/node_modules/
+/.next/
+/out/
+/coverage/
+*.tsbuildinfo
+.env*
+!.env.example
+*.log
+
+# Local caches and generated files
+/.vercel/
+/.cache/
+/next-env.d.ts
+
+# OS and editor artifacts
+.DS_Store
+Thumbs.db
+Desktop.ini
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~

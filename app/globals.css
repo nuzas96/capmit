@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+@theme {
+  --color-page: #FAFBF7;
+  --color-ink: #23352D;
+  --color-rule: #D6DDD7;
+  --color-proposal-blue: #2859B8;
+  --color-highlight-yellow: #F2DE73;
+  --color-breach-red: #AD3D35;
+
+  --spacing-gutter: 1.25rem;
+  --spacing-touch: 2.75rem;
+
+  --text-title: 1.625rem;
+  --text-title--line-height: 2rem;
+  --text-signature: 1.25rem;
+  --text-signature--line-height: 1.6875rem;
+  --text-section: 1.125rem;
+  --text-section--line-height: 1.5rem;
+  --text-body: 1rem;
+  --text-body--line-height: 1.5rem;
+  --text-capacity: 1.125rem;
+  --text-capacity--line-height: 1.5rem;
+  --text-note: 0.875rem;
+  --text-note--line-height: 1.25rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-public-sans), system-ui, Arial, sans-serif;
+  --font-display: var(--font-planner-hand), cursive;
+}
+
+@layer base {
+  body {
+    min-height: 100dvh;
+    background: var(--color-page);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-proposal-blue);
+    outline-offset: 3px;
+  }
+}
+
+@utility capacity-numerals {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Screen 4: an annotated timetable leading into a capacity decision. */
+.planner { max-width: 510px; margin-inline: auto; padding: 18px 16px 28px; }
+.masthead { display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; margin-bottom: 22px; }
+.wordmark { font-family: var(--font-display); font-size: 40px; line-height: 44px; }
+.planner h1 { position: relative; font-family: var(--font-display); font-size: 41px; line-height: 47px; font-weight: 600; margin-bottom: 26px; width: fit-content; }
+.trail-area { position: relative; }
+.calendar { position: relative; padding: 14px 12px 12px; }
+.day-heading { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin-bottom: 22px; }
+.day-heading h2 { font-family: var(--font-display); font-size: 28px; line-height: 31px; font-weight: 400; }
+.day-heading > span { font-size: 14px; line-height: 20px; max-width: 145px; text-align: right; }
+.timetable { position: relative; height: 156px; margin-bottom: 14px; }
+.hour { position: absolute; width: 100%; display: flex; align-items: center; gap: 10px; transform: translateY(-50%); }
+.hour span { font-size: 14px; width: 48px; flex-shrink: 0; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.hour i { height: 1px; background: var(--color-rule); flex: 1; }
+.meeting { position: absolute; inset: 0 0 0 58px; border-left: 0 solid var(--color-proposal-blue); padding: 13px 0 13px 16px; color: var(--color-proposal-blue); display: flex; flex-direction: column; justify-content: center; background: color-mix(in srgb, var(--color-proposal-blue) 7%, var(--color-page)); }
+ .meeting-outline { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.meeting-outline path { fill: none; stroke: var(--color-proposal-blue); stroke-width: 1.6; vector-effect: non-scaling-stroke; stroke-linejoin: round; stroke-linecap: round; }
+[data-included="true"] .meeting { background: color-mix(in srgb, var(--color-proposal-blue) 11%, var(--color-page)); }
+.proposal-label, .meeting p, .meeting-fit { font-size: 14px; line-height: 20px; }
+.proposal-label { width: fit-content; background: var(--color-proposal-blue); color: var(--color-page); padding: 2px 7px; font-weight: 500; }
+.meeting h3 { font-family: var(--font-display); font-size: 26px; line-height: 28px; font-weight: 400; margin: 6px 0 5px; max-width: none; }
+.meeting-fit { margin-top: 10px; color: var(--color-ink); max-width: 160px; padding-right: 18px; }
+.decision-intro { padding-right: 0; }
+.include-control { display: flex; align-items: center; gap: 12px; min-height: 56px; padding-block: 6px; cursor: pointer; font-size: 16px; width: fit-content; }
+.include-control input { appearance: none; position: relative; width: 24px; height: 24px; border: 1.5px solid var(--color-ink); border-radius: 3px; background: var(--color-page); flex-shrink: 0; cursor: pointer; }
+.include-control input:checked { background: var(--color-proposal-blue); border-color: var(--color-proposal-blue); }
+.include-control input:checked::after { content: ""; position: absolute; width: 7px; height: 12px; left: 7px; top: 3px; border: solid var(--color-page); border-width: 0 2px 2px 0; transform: rotate(42deg); }
+.control-copy { font-weight: 500; }
+.control-state { display: block; font-size: 14px; line-height: 20px; font-weight: 400; }
+[data-included="true"] .control-state { color: var(--color-proposal-blue); }
+.signature { font-family: var(--font-display); font-size: 24px; line-height: 29px; font-weight: 600; margin: 0 0 10px; }
+.insight { position: relative; isolation: isolate; display: inline-block; }
+.insight::after { content: ""; position: absolute; z-index: -1; height: 17px; bottom: 1px; left: 0; right: -2px; background: var(--color-highlight-yellow); clip-path: polygon(0 20%, 97% 0, 100% 80%, 2% 100%); }
+.preview-instruction { font-size: 14px; line-height: 21px; min-height: 42px; max-width: 270px; }
+.consequence-connector { position: absolute; width: 22px; top: 218px; right: -8px; height: calc(100% - 207px); overflow: visible; pointer-events: none; }
+.consequence-connector path, .shortfall-bracket path { fill: none; stroke: var(--color-proposal-blue); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.analysis-title { font-family: var(--font-display); font-size: 25px; line-height: 29px; font-weight: 600; padding-right: 0; margin: 0; padding-bottom: 0; max-width: 235px; }
+.comparison-heading, .comparison-values { display: grid; grid-template-columns: minmax(0, 1fr) 58px 77px; gap: 8px; align-items: baseline; }
+.comparison-heading { font-size: 14px; padding: 12px 0 0; border-top: 1px solid var(--color-rule); }
+.comparison-heading > :not(:first-child), .comparison-values > :not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+.comparison-heading > :last-child { color: var(--color-proposal-blue); }
+.preview-column { border-top: 2px solid var(--color-proposal-blue); padding-top: 5px; }
+.preview-column small { display: block; font-size: 14px; font-weight: 400; }
+
+.comparison-values { font-size: 20px; line-height: 26px; }
+.comparison-values > :first-child { font-size: 16px; font-weight: 500; }
+.comparison-values strong { font-weight: 600; position: relative; }
+[data-included="true"] .comparison-values strong::before { content: "→"; position: absolute; left: 0; top: 1px; font-size: 14px; color: var(--color-ink); font-weight: 400; }
+.load-row { padding-top: 12px; }
+.proposed-value { color: var(--color-proposal-blue); }
+.breach { color: var(--color-breach-red); }
+.load-track { height: 6px; background: var(--color-rule); margin-top: 5px; position: relative; }
+.load-base, .load-added { position: absolute; height: 100%; background: var(--color-ink); }
+.load-added { background: var(--color-proposal-blue); }
+.load-added.over-limit { background: var(--color-breach-red); height: 7px; top: -1.5px; }
+.load-limit { position: absolute; left: 90.9091%; top: -5px; height: 14px; width: 1px; background: var(--color-ink); }
+.time-caption { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; line-height: 20px; padding-top: 9px; }
+.recovery { margin-top: 24px; border-top: 1px solid var(--color-rule); padding-top: 18px; }
+.remaining-label { font-size: 14px; margin-bottom: 8px; }
+.recovery .comparison-values { grid-template-columns: minmax(0, 1fr) 74px 70px; font-size: 32px; line-height: 38px; }
+.recovery .comparison-values > :first-child { font-family: var(--font-display); font-size: 29px; font-weight: 600; }
+.recovery .comparison-values strong::before { top: 3px; }
+.recovery-description { font-size: 14px; margin-top: 5px; padding-left: 33px; }
+.recovery-chart { position: relative; margin: 16px 0 4px; height: 154px; }
+.recovery-rail { position: absolute; top: 62px; left: 0; right: 0; height: 2px; background: var(--color-rule); }
+.recovery-floor { position: absolute; left: 50%; top: 49px; height: 29px; border-left: 2px solid var(--color-ink); }
+.recovery-floor span { position: absolute; transform: translateX(-50%); top: -47px; font-size: 16px; font-weight: 600; }
+.recovery-floor::before { content: "Floor"; position: absolute; transform: translateX(-50%); top: -25px; font-size: 14px; }
+.baseline-marker { position: absolute; top: 56px; left: 73.3333%; width: 14px; height: 14px; border: 2px solid var(--color-ink); border-radius: 50%; transform: translateX(-50%); background: var(--color-page); }
+.baseline-marker span { position: absolute; top: -57px; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 16px; font-weight: 600; text-align: center; }
+.baseline-marker small, .current-marker-label small { display: block; font-size: 14px; line-height: 21px; font-weight: 400; }
+.current-marker-label { position: absolute; top: 0; left: 30%; transform: translateX(-50%); font-size: 16px; font-weight: 600; text-align: center; color: var(--color-breach-red); visibility: hidden; white-space: nowrap; }
+.recovery-marker { position: absolute; left: 73.3333%; top: 58px; width: 10px; height: 10px; background: var(--color-ink); border-radius: 2px; transform: translateX(-50%); }
+[data-included="true"] .recovery-marker { left: 30%; background: var(--color-breach-red); }
+[data-preview-animating="true"] .recovery-marker { transition: left 450ms ease-in-out; }
+.shortfall-bracket { position: absolute; left: 30%; width: 20%; top: 78px; height: 40px; visibility: hidden; }
+.shortfall-bracket path { stroke: var(--color-breach-red); stroke-width: 1.8; }
+.recovery-scale { display: flex; justify-content: space-between; position: absolute; top: 138px; width: 100%; font-size: 14px; }
+.floor-caption { font-size: 14px; }
+.shortfall-note { position: absolute; top: 119px; left: 0; right: 0; text-align: center; visibility: hidden; font-size: 18px; line-height: 26px; font-weight: 600; color: var(--color-breach-red); }
+.floor-ring { position: absolute; width: 66px; height: 38px; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-5deg); visibility: hidden; overflow: visible; }
+.floor-ring path { fill: none; stroke: var(--color-breach-red); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+[data-visible="true"] { visibility: visible; }
+.explanation { margin-top: 12px; border-top: 1px solid var(--color-rule); font-size: 14px; }
+.explanation summary { min-height: 48px; padding-block: 14px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.explanation summary::-webkit-details-marker { display: none; }
+.explanation summary::after { content: "+"; font-size: 22px; }
+.explanation[open] summary::after { content: "−"; }
+.explanation p { padding-bottom: 16px; line-height: 22px; }
+.decision-footer { margin-top: 16px; }
+.next-action { width: 100%; min-height: 52px; border-radius: 8px; padding: 10px 14px; background: var(--color-ink); color: var(--color-page); font-family: var(--font-display); font-size: 28px; font-weight: 400; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 12px; }
+.next-action:active { outline: 2px solid var(--color-ink); outline-offset: 2px; }
+.decision-footer p { text-align: center; font-size: 14px; margin-top: 10px; }
+#preview-notice { margin-top: 5px; }
+@media (prefers-reduced-motion: reduce) { [data-included="true"] .recovery-marker { transition: none; } }
+@media (forced-colors: active) { .include-control input { appearance: auto; } .include-control input::after { display: none; } }
+@media (max-width: 359px) { .day-heading { align-items: flex-start; } .day-heading > span { max-width: 110px; } .meeting { padding-left: 12px; } .meeting h3 { font-size: 18px; } .signature { font-size: 18px; } }
+
+/* Reference-led display type and semantic line illustrations. */
+.week-label { font-family: var(--font-display); font-size: 25px; border-bottom: 2px solid var(--color-proposal-blue); transform: rotate(-2deg); }
+.title-stroke { position: absolute; bottom: -11px; left: 40%; width: 83px; height: 12px; }
+.title-stroke path { fill: none; stroke: var(--color-proposal-blue); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.sketch { width: 25px; height: 25px; flex: 0 0 25px; overflow: visible; }
+.sketch path { stroke: currentColor; fill: none; stroke-width: 1.5; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
+.meeting-sketch { position: absolute; bottom: 13px; right: 12px; width: 49px; height: auto; color: var(--color-ink); transform: rotate(-5deg); }
+.insight-callout { position: relative; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 8px; margin: 12px 0; padding: 18px 12px; }
+.thought-sketch { width: 48px; max-width: none; height: auto; margin: 10px 0 0 -5px; }
+.insight-callout .preview-instruction { min-height: 42px; }
+.metric-name, #recovery-title { display: flex; align-items: center; gap: 8px; }
+.metric-name .sketch { width: 29px; height: 29px; flex-basis: 29px; }
+.load-track, .time-caption { margin-left: 37px; }
+.recovery-bottom { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 58px; }
+.rest-note { position: relative; font-family: var(--font-display); font-size: 19px; line-height: 21px; color: var(--color-proposal-blue); padding: 10px 12px 14px; text-align: center; transform: rotate(-5deg); flex-shrink: 0; }
+.rest-note svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.rest-note path { fill: none; stroke: var(--color-proposal-blue); stroke-width: 1.5; vector-effect: non-scaling-stroke; stroke-linecap: round; }
+@media (max-width: 359px) { .planner h1 { font-size: 30px; } .signature { font-size: 21px; } .meeting-sketch { width: 30px; right: 8px; } }
+
+/* Enclosing planner regions follow the approved composition. */
+.planner-frame { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.planner-frame path { fill: none; stroke: color-mix(in srgb, var(--color-ink) 35%, var(--color-page)); stroke-width: 1.3; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
+.insight-frame path { stroke: var(--color-highlight-yellow); stroke-width: 2; }
+.pen-accent { display: inline-block; width: 19px; height: 25px; color: var(--color-proposal-blue); flex-shrink: 0; }
+.pen-accent path { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.wordmark, .day-heading h2 { position: relative; }
+.wordmark > .pen-accent { position: absolute; top: 0; right: -21px; }
+.day-heading h2 > .pen-accent { width: 14px; height: 21px; vertical-align: top; }
+.meeting::before { content: ""; position: absolute; left: -8px; top: 0; bottom: 0; width: 7px; border: solid var(--color-proposal-blue); border-width: 2px 0 2px 2px; }
+.meeting-accent { position: absolute; bottom: 61px; right: 10px; transform: rotate(-12deg); }
+.insight-accent { position: absolute; right: 4px; top: 14px; width: 13px; color: var(--color-highlight-yellow); }
+.analysis-region { position: relative; padding: 14px 12px 0; }
+.analysis-heading { position: relative; min-height: 60px; display: flex; align-items: flex-start; padding-right: 72px; }
+.analysis-title { position: relative; }
+.analysis-title .pen-accent { position: absolute; right: -16px; top: 4px; width: 13px; height: 20px; }
+.analysis-note { position: absolute; top: -18px; right: -12px; width: 74px; padding: 8px 6px 11px; font-family: var(--font-display); font-size: 16px; line-height: 17px; text-align: center; color: var(--color-ink); background: color-mix(in srgb, var(--color-proposal-blue) 6%, var(--color-page)); transform: rotate(-5deg); }
+.analysis-note svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.analysis-note path { fill: none; stroke: var(--color-proposal-blue); stroke-width: 1.5; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.next-action > .pen-accent { color: var(--color-page); }
+.next-action > .cta-left { transform: rotate(180deg); }
+@media (max-width: 359px) { .planner h1 { font-size: 35px; } .signature { font-size: 21px; } .day-heading h2 { font-size: 24px; } .analysis-heading { padding-right: 64px; } .analysis-title { font-size: 23px; } }
+
+/* Analysis-panel reference refinement; intentionally scoped to this panel. */
+.analysis-region .analysis-heading { min-height: 69px; padding-right: 76px; }
+.analysis-region .analysis-title { font-size: 29px; line-height: 30px; max-width: 240px; }
+.analysis-region .analysis-note { top: -16px; right: -9px; width: 75px; font-size: 15px; line-height: 16px; }
+.analysis-region .comparison-heading { align-items: center; padding: 10px 0 2px; }
+.analysis-region .now-column { position: relative; justify-self: end; }
+.analysis-region .now-column::after { content: ""; position: absolute; bottom: -4px; left: 0; width: 100%; height: 2px; background: var(--color-proposal-blue); transform: rotate(-3deg); }
+.analysis-region .preview-column { position: relative; border: 0; padding: 0 10px 0 0; color: var(--color-ink); white-space: nowrap; }
+.analysis-region .preview-column > .pen-accent { position: absolute; top: 0; right: -5px; width: 12px; height: 19px; }
+.analysis-region .load-row { padding-top: 15px; }
+.analysis-region .load-row[data-dimension="Time"] { --metric-color: #5B8DEF; }
+.analysis-region .load-row[data-dimension="Mental"] { --metric-color: #55B88A; }
+.analysis-region .load-row[data-dimension="Social"] { --metric-color: #8B7CE8; }
+.analysis-region .metric-name { gap: 9px; }
+.analysis-region .metric-name .sketch { width: 32px; height: 32px; flex-basis: 32px; }
+.analysis-region .sketch path { stroke-width: 1.7; }
+.analysis-region .load-row .comparison-values strong { color: var(--color-ink); }
+.analysis-region .load-track { margin: 3px 56px 0 41px; height: 8px; border-radius: 5px; }
+.analysis-region .load-base, .analysis-region .load-added { background: var(--metric-color); }
+.analysis-region .load-base { border-radius: 5px 0 0 5px; }
+.analysis-region .load-added { border-left: 1px solid var(--color-ink); }
+.analysis-region .load-added.over-limit { height: 8px; top: 0; outline: 1px solid var(--color-ink); outline-offset: -1px; }
+.analysis-region .load-limit { height: 16px; top: -4px; }
+.analysis-region .time-caption { margin-left: 41px; padding-top: 7px; font-size: 14px; line-height: 20px; }
+.analysis-region .time-caption > :last-child { margin-right: 47px; white-space: nowrap; }
+.analysis-region .time-caption { flex-wrap: wrap; column-gap: 10px; }
+.analysis-region .recovery { position: relative; margin-top: 18px; padding-top: 14px; }
+.analysis-region .remaining-label { margin-bottom: 4px; }
+.analysis-region .recovery .comparison-values { grid-template-columns: minmax(0, 1fr) 81px 70px; font-size: 36px; line-height: 42px; }
+.analysis-region #recovery-title { font-size: 29px; gap: 8px; }
+.analysis-region #recovery-title .sketch { width: 32px; height: 36px; flex-basis: 32px; }
+.analysis-region .recovery-description { margin-top: 0; padding-left: 40px; line-height: 20px; }
+.analysis-region .recovery-chart { width: calc(100% - 90px); margin-top: 14px; height: 144px; }
+.analysis-region .baseline-marker { width: 17px; height: 17px; top: 54px; }
+.analysis-region .recovery-marker { width: 13px; height: 13px; top: 56px; }
+.analysis-region .baseline-marker span { top: -55px; }
+.analysis-region .recovery-scale { top: 86px; }
+.analysis-region .shortfall-note { top: 113px; font-size: 16px; line-height: 23px; white-space: nowrap; text-align: left; }
+.analysis-region .floor-ring { width: 56px; }
+.analysis-region .recovery-bottom { min-height: 24px; }
+.analysis-region .rest-note { position: absolute; bottom: 44px; right: -3px; width: 84px; font-size: 18px; line-height: 19px; padding: 13px 6px 17px; }
+.analysis-region .explanation { margin-top: 10px; }
+@media (max-width: 359px) {
+  .analysis-region .analysis-title { font-size: 26px; }
+  .analysis-region .recovery .comparison-values { font-size: 30px; grid-template-columns: minmax(0, 1fr) 69px 60px; }
+  .analysis-region #recovery-title { font-size: 25px; }
+  .analysis-region .recovery-chart { width: calc(100% - 75px); }
+  .analysis-region .rest-note { width: 70px; font-size: 16px; }
+  .analysis-region .shortfall-note { white-space: normal; }
+}
+
+.planner-dog { position: absolute; width: 70px; height: auto; right: 8px; top: -49px; pointer-events: none; }
+
+/* Keep the three recovery annotations distinct on narrow phones. */
+@media (max-width: 359px) {
+  .analysis-region .recovery-chart { margin-top: 62px; }
+  .analysis-region .current-marker-label { top: -48px; }
+  .analysis-region .floor-ring { width: 48px; }
+}
