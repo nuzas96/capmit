@@ -9,7 +9,7 @@
 
 **Prototype Phase:** Interactive mobile-first coded prototype built with Next.js using local/mock scenario data. Prepared for the CodeNection 2026 Prototype Phase submission.
 
-- Live Prototype: `TBD — deployment pending`
+- Live Prototype: [https://capmit.vercel.app](https://capmit.vercel.app)
 - GitHub Repository: [nuzas96/capmit](https://github.com/nuzas96/capmit)
 - Presentation Slides: `TBD`
 - Video Presentation: `TBD`
@@ -286,7 +286,7 @@ The **15% Recovery Floor** is a supporting constraint and signature visual, not 
 | Styling | Tailwind CSS 4 setup, global CSS tokens, route-specific CSS Modules | Scoped responsive styling and precise design control | Custom illustrated UI needs careful responsive QA |
 | Typography / assets | Public Sans + Patrick Hand via `next/font/google`; local SVG/PNG assets | Readable data with a recognizable planner identity | Font fetching can require network access during a fresh build |
 | Local/mock state | React state; sessionStorage for the included-commitment preview | Validates interaction without backend plumbing | No durable schedule persistence or arbitrary user data; session preview only |
-| Hosting target | Vercel | Natural Next.js deployment workflow | Public deployment pending |
+| Hosting target | Vercel | Natural Next.js deployment workflow | Production prototype deployed publicly. |
 | Backend / data — future | Supabase authentication + PostgreSQL | Saved commitments and preferences with a focused implementation path | Schema, access controls, and row-level security must be implemented and tested |
 | AI — future / optional | Natural-language input parsing | Could reduce input friction | Must not be the source of truth for scheduling decisions |
 
@@ -487,7 +487,7 @@ Prototype Phase:
 - End-to-end flow: Complete
 - Mobile audit: Complete
 - GitHub repository: Complete
-- Public deployment: Pending
+- Public deployment: Complete
 - Ideation board images: Complete
 - Mentor consultation documentation: Pending
 - Presentation slides: Pending
@@ -499,7 +499,7 @@ GitHub:
 [https://github.com/nuzas96/capmit](https://github.com/nuzas96/capmit)
 
 Live Prototype:  
-TBD
+[https://capmit.vercel.app](https://capmit.vercel.app)
 
 Presentation Slides:  
 TBD
