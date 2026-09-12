@@ -84,6 +84,8 @@
 @media(min-width:768px) { .page h1 { font-size:60px; line-height:66px; } .glance dl { grid-template-columns:repeat(4,1fr); } .glance dl > div + div { border-left:1px solid var(--color-rule); padding-left:15px; } .event { padding:13px 17px; } .event > div { flex:1; } .event p { display:inline-block; margin-right:15px; } .assignment { min-height:130px; } .openSlot { min-height:150px; } .mapping li { grid-template-columns:36px 150px minmax(0,1fr); align-items:center; } .dimensions { grid-column:3; } .flexible { display:flex; flex-wrap:wrap; gap:15px; } .flexible h2 { width:100%; } .flexible > div { flex:1; } }
 @media(max-width:359px) { .timeRow { grid-template-columns:46px minmax(0,1fr); gap:5px; } .timeline::before { left:40px; } .timeRow > time::after { left:37px; width:7px; height:7px; } .event { display:block; padding:10px; } .event > .icon { float:right; width:25px; margin-left:5px; } .event h3 { font-size:25px; } .panel h2 { font-size:30px; } .glance dt { flex-direction:column; align-items:flex-start; min-height:83px; } .days { gap:3px; margin-inline:0; } .days button { font-size:23px; } .insight { grid-template-columns:38px minmax(0,1fr); gap:10px; padding-inline:12px; } .insight img { width:38px; } .cta { font-size:29px; gap:6px; } }
 
+@media (min-width:768px) { .dogNote { margin-top:0; margin-bottom:0; position:relative; top:4px; } }
+
 @media (max-width:767px) {
   .cta { font-size:30px; line-height:36px; min-height:60px; gap:6px; }
   .footer p { font-size:14px; line-height:22px; }
