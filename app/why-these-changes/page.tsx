@@ -26,7 +26,7 @@ const rows = [
 ] as const;
 
 export default function WhyTheseChanges() {
-  return <main className={s.page}>
+  return <main data-capmit-shell="wide" className={s.page}>
     <header className={s.header}><span className={s.wordmark}>Capmit<Accent /></span><span className={s.week}>Aina’s week</span></header>
     <h1>Why these changes?<svg viewBox="0 0 110 12" aria-hidden="true"><path d="M2 4 Q49 1 106 4 L47 10" /></svg></h1>
     <div className={s.intro}><p>Nothing moved at random.<br /><span className={s.highlight}>Every change follows your rules.</span></p><div className={s.pathNote}><svg viewBox="0 0 110 95" aria-hidden="true"><path d="M54 6 C37 6 37 28 53 29 C71 29 71 6 54 6 Z M54 29 L54 45 M14 71 L14 59 Q14 44 30 45 L78 45 Q96 44 96 59 L96 71 M14 71 C-1 71 -1 92 14 92 C30 92 30 71 14 71 Z M96 71 C81 71 81 92 96 92 C111 92 111 71 96 71 Z" /></svg><span>Your preferences<br /><b>→ a balanced week</b></span></div></div>

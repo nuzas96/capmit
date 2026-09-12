@@ -41,7 +41,7 @@ export default function Home() {
   }
 
   return (
-    <main className="planner" data-included={included} data-preview-animating={animating}>
+    <main data-capmit-shell="focused" className="planner" data-included={included} data-preview-animating={animating}>
       <header className="masthead"><span className="wordmark">Capmit<Accent /></span><span className="week-label">Aina’s week</span></header>
       <h1>Can I take this on?<svg className="title-stroke" viewBox="0 0 110 12" aria-hidden="true"><path d="M2 4 Q49 1 106 4 L47 10" /></svg></h1>
       <div className="trail-area">

@@ -29,7 +29,7 @@ const loads = [
 ] as const;
 
 export default function WeeklyCapacity() {
-  return <main className={s.page}>
+  return <main data-capmit-shell="wide" className={s.page}>
     <header className={s.header}><span className={s.wordmark}>Capmit<Accent /></span><span className={s.week}>Sep 14–20</span></header>
     <h1>Good morning, Aina<svg viewBox="0 0 110 12" aria-hidden="true"><path d="M2 4 Q49 1 106 4 L47 10" /></svg></h1>
     <p className={s.greeting}>Here’s how much room your week really has.</p>

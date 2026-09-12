@@ -36,9 +36,9 @@ const loads: { name: IconName; value: string; fill: number; color: string }[] = 
 
 export default function AddCommitment() {
   const rules = [true, true, true];
-  return <main className={s.page}>
+  return <main data-capmit-shell="focused" className={s.page}>
     <header className={s.header}><span className={s.wordmark}>Capmit<Accent /></span><span className={s.week}>Aina’s week</span></header>
-    <div className={s.title}><h1>Add commitment</h1><svg viewBox="0 0 110 12" aria-hidden="true"><path d="M2 4 Q49 1 106 4 L47 10" /></svg></div>
+    <div data-shell-title className={s.title}><h1>Add commitment</h1><svg viewBox="0 0 110 12" aria-hidden="true"><path d="M2 4 Q49 1 106 4 L47 10" /></svg></div>
     <section className={s.panel} aria-labelledby="template-title"><Frame />
       <div className={s.teamNote}><Icon name="Social" /><span>Build great<br />things together</span></div>
       <h2 id="template-title">What are you adding?<Accent /></h2>

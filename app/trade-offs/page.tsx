@@ -50,7 +50,7 @@ function RecoveryScale({ value }: { value: number }) {
 export default function TradeOffs() {
   const [selected, setSelected] = useState<string>("balanced");
   const plan = scenarios.find(item => item.id === selected)!;
-  return <main className={s.page}>
+  return <main data-capmit-shell="wide" className={s.page}>
     <header className={s.header}><span className={s.wordmark}>Capmit<Accent /></span><span className={s.week}>Aina’s week</span></header>
     <h1>What has to give?<svg viewBox="0 0 110 12" aria-hidden="true"><path d="M2 4 Q49 1 106 4 L47 10" /></svg></h1>
     <div className={s.intro}><p>To take on this meeting,<br /><span className={s.highlight}>something else needs to change.</span></p>

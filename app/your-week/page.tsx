@@ -24,7 +24,7 @@ const mapping = [
 ] as const;
 
 export default function YourWeek() {
-  return <main className={s.page}>
+  return <main data-capmit-shell="wide" className={s.page}>
     <header className={s.header}><span className={s.wordmark}>Capmit<Accent /></span><span className={s.week}>Sep 14–20</span></header>
     <h1>Your week<svg viewBox="0 0 110 12" aria-hidden="true"><path d="M2 4 Q49 1 106 4 L47 10" /></svg></h1><p className={s.intro}>Here’s what’s already taking up your capacity.</p>
     <div className={s.dogNote}><Image src="/doodles/planner-dog.svg" width={120} height={92} alt="" loading="eager" /><span>busy in more<br />ways than one</span></div>

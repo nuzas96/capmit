@@ -244,6 +244,63 @@
 
 .planner-dog { position: absolute; width: 70px; height: auto; right: 8px; top: -49px; pointer-events: none; }
 
+/* A shared desktop frame; existing phone compositions remain unchanged. */
+@media (min-width: 768px) {
+  main[data-capmit-shell] {
+    --shell-width: 900px;
+    --shell-focus-width: 600px;
+    --shell-gutter: 24px;
+    --shell-section-gap: 24px;
+    --shell-heading-gap: 32px;
+    max-width: var(--shell-width);
+    margin-inline: auto;
+    padding: 28px var(--shell-gutter) 40px;
+  }
+
+  main[data-capmit-shell] > header {
+    align-items: baseline;
+    margin-bottom: var(--shell-heading-gap);
+  }
+
+  main[data-capmit-shell] h1 {
+    font-size: 56px;
+    line-height: 62px;
+    font-weight: 600;
+    width: fit-content;
+    margin-bottom: var(--shell-heading-gap);
+  }
+
+  main[data-capmit-shell] > [data-shell-title] {
+    width: fit-content;
+    margin-bottom: var(--shell-heading-gap);
+  }
+
+  main[data-capmit-shell] > [data-shell-title] h1 { margin-bottom: 0; }
+  main[data-capmit-shell] > [data-shell-title] > svg {
+    position: absolute;
+    bottom: -12px;
+    right: 0;
+    margin-left: 0;
+  }
+
+  main[data-capmit-shell="focused"] > :not(header, footer, h1, [data-shell-title], .sr-only) {
+    width: 100%;
+    max-width: var(--shell-focus-width);
+    margin-inline: auto;
+  }
+
+  main[data-capmit-shell="focused"] > .trail-area {
+    margin-bottom: var(--shell-section-gap);
+  }
+
+  main[data-capmit-shell] > footer {
+    width: 100%;
+    margin-top: var(--shell-heading-gap);
+    text-align: center;
+  }
+
+}
+
 /* Keep the three recovery annotations distinct on narrow phones. */
 @media (max-width: 359px) {
   .analysis-region .recovery-chart { margin-top: 62px; }
