@@ -283,6 +283,30 @@
     margin-left: 0;
   }
 
+  main[data-capmit-shell="focused"] > h1,
+  main[data-capmit-shell="focused"] > [data-shell-title] {
+    width: 100%;
+    max-width: var(--shell-focus-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Keep the underline attached to the text inside the wider title column. */
+  main[data-capmit-shell="focused"] > [data-shell-title] {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+  }
+  main[data-capmit-shell="focused"] > [data-shell-title] > h1,
+  main[data-capmit-shell="focused"] > [data-shell-title] > svg {
+    grid-area: 1 / 1;
+  }
+  main[data-capmit-shell="focused"] > [data-shell-title] > svg {
+    position: static;
+    justify-self: end;
+    align-self: end;
+    transform: translateY(100%);
+  }
+
   main[data-capmit-shell="focused"] > :not(header, footer, h1, [data-shell-title], .sr-only) {
     width: 100%;
     max-width: var(--shell-focus-width);
