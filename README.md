@@ -234,18 +234,6 @@ Capmit presents two scenario choices:
 
 The implementation captures below were taken from the [live production prototype](https://capmit.vercel.app) at a 1280 × 900 desktop viewport with deviceScaleFactor 1. They are full-page screenshots of the final Prototype Phase build. State-dependent screens were captured in the intended Aina demo flow: Screen 4 shows the proposed Hackathon meeting impact, Screen 5 shows Balanced Week selected, and Screen 7 shows the applied Balanced Week result. Reduced motion was used to capture stable final states after fonts and images loaded.
 
-The table links **approved visual references**; the inline images below show **actual implemented production captures**. Device frames in the references are not part of the implementation.
-
-| Screen | Approved visual reference |
-| --- | --- |
-| 1. Home / Weekly Capacity | [View reference](public/references/capmit-screen1-target.png) |
-| 2. Your Week | [View reference](public/references/capmit-screen2-target.png) |
-| 3. Add Commitment | [View reference](public/references/capmit-screen3-target.png) |
-| 4. Can I Take This On? | [View reference](public/references/capmit-screen4-target.png) |
-| 5. What Has To Give? | [View reference](public/references/capmit-screen5-target.png) |
-| 6. Why These Changes? | [View reference](public/references/capmit-screen6-target.png) |
-| 7. Rebalanced Week | [View reference](public/references/capmit-screen7-target.png) |
-
 #### Screen 1 — Home / Weekly Capacity
 
 Route: `/home`
@@ -511,7 +499,6 @@ app/
   rebalanced-week/            # Screen 7
 public/
   doodles/                    # Standalone SVG illustrations
-  references/                 # Seven approved visual targets
   ideation/                   # Five SVG concept/process diagrams
   screenshots/                # Seven full-page production desktop captures
 AGENTS.md                     # Stable project constraints
