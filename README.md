@@ -1,4 +1,4 @@
-# Capmit by llaollao
+# Capmit by fl0wstate
 
 **Check your capacity before you commit.**
 
@@ -18,7 +18,7 @@
 
 ## Team
 
-- Team Name: `llaollao`
+- Team Name: `fl0wstate`
 - Team Members:
   - Muhammad Nuzhmi Asyraf bin Rozali
   - Nur Husna binti Mohamed Din
