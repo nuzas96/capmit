@@ -1,4 +1,4 @@
-# Capmit
+# Capmit by llaollao
 
 **Check your capacity before you commit.**
 
@@ -7,11 +7,13 @@
 > Most planners ask: “Where can I fit this?”  
 > Capmit asks: “If I say yes to this, what has to give?”
 
+**Problem Statement:** Beating the Burnout — Stress & Workload Manager
+
 **Prototype Phase:** Interactive mobile-first coded prototype built with Next.js using local/mock scenario data. Prepared for the CodeNection 2026 Prototype Phase submission.
 
 - Live Prototype: [https://capmit.vercel.app](https://capmit.vercel.app)
 - GitHub Repository: [nuzas96/capmit](https://github.com/nuzas96/capmit)
-- Presentation Slides: `TBD`
+- Presentation Slides: [Capmit — CodeNection 2026 Final Pitch Deck](https://canva.link/5t37iyfhj07nkip)
 - Video Presentation: `TBD`
 
 ## Team
@@ -177,6 +179,8 @@ The actual seven-screen journey connects an apparently free Wednesday slot to an
 Available mentorship slots were already full when the team attempted to arrange a consultation. Therefore, this submission does not attribute any design or product decisions to mentor feedback.
 
 ## 3. Design & Prototype
+
+**UI Prototype:** [https://capmit.vercel.app](https://capmit.vercel.app)
 
 ### Prototype
 
@@ -516,9 +520,15 @@ Each named screen directory contains its page and CSS Module. Dependencies, buil
 
 ## Research Context
 
-The concept was informed by research showing that student burnout and workload are associated with multiple factors, including academic demand, sleep, social support, lifestyle, and role/task overload. This provides broad context for considering more than calendar time; it does not validate Capmit's demo percentages or establish that the product clinically prevents burnout.
+The concept was informed by recent research on student burnout and wellbeing. This context supports considering more than calendar time when reasoning about student workload; it does **not** validate Capmit's demo percentages, establish a clinical Recovery Floor, or prove that Capmit prevents burnout.
 
-No verified research bibliography is included in the repository yet. Research links will be added only after verification.
+Verified references:
+
+- Chong, L. Z., Foo, L. K., & Chua, S.-L. (2025). *Student Burnout: A Review on Factors Contributing to Burnout Across Different Student Populations*. Behavioral Sciences, 15(2), 170. [https://doi.org/10.3390/bs15020170](https://doi.org/10.3390/bs15020170)
+- Joanne Lim, K. E., Cheah, K. J., Abdul Latif, F. A., & Mohd Shahrin, F. I. (2025). *Academic Burnout and Its Association with Sleep Quality, Physical Activity, and Social Media Addiction Among University Students in Perak, Malaysia: A Cross-Sectional Study*. Makara Journal of Health Research, 29(2). [https://doi.org/10.7454/msk.v29i2.1845](https://doi.org/10.7454/msk.v29i2.1845)
+- Hamsan, H., Adebo, A., Wan Zulkili, W. N., & Tang, S. S. (2025). *Gender, psychological well-being, and burnout among students in Malaysian higher institution: The mediating effect of social support*. Multidisciplinary Science Journal, 7(9), 2025447. [https://doi.org/10.31893/multiscience.2025447](https://doi.org/10.31893/multiscience.2025447)
+
+The first review synthesised 38 recent studies published from 2019–2024. Malaysia-specific studies in Perak and the Klang Valley further show that burnout is associated with factors beyond available clock time, including sleep quality, psychological wellbeing, and social support. These studies provide context for the problem framing only; Capmit's capacity model remains a planning concept to be validated during later phases.
 
 ## Current Status
 
@@ -531,7 +541,7 @@ Prototype Phase:
 - Public deployment: Complete
 - Ideation board images: Complete
 - Mentor consultation: Not completed during the Prototype Phase; no mentor feedback claimed
-- Presentation slides: Pending
+- Presentation slides: Complete
 - Video: Pending
 
 ## Submission Links
@@ -543,7 +553,7 @@ Live Prototype:
 [https://capmit.vercel.app](https://capmit.vercel.app)
 
 Presentation Slides:  
-TBD
+[https://canva.link/5t37iyfhj07nkip](https://canva.link/5t37iyfhj07nkip)
 
 Video Presentation:  
 TBD
