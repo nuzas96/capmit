@@ -14,7 +14,7 @@
 - Live Prototype: [https://capmit.vercel.app](https://capmit.vercel.app)
 - GitHub Repository: [nuzas96/capmit](https://github.com/nuzas96/capmit)
 - Presentation Slides: [Capmit — CodeNection 2026 Final Pitch Deck](https://canva.link/5t37iyfhj07nkip)
-- Video Presentation: `TBD`
+- Video Presentation: [https://youtu.be/AvymTUhoi_M?si=iV9SB1IiqFDPw7h4](https://youtu.be/AvymTUhoi_M?si=iV9SB1IiqFDPw7h4)
 
 ## Team
 
@@ -542,7 +542,7 @@ Prototype Phase:
 - Ideation board images: Complete
 - Mentor consultation: Not completed during the Prototype Phase; no mentor feedback claimed
 - Presentation slides: Complete
-- Video: Pending
+- Video: Complete
 
 ## Submission Links
 
@@ -556,4 +556,4 @@ Presentation Slides:
 [https://canva.link/5t37iyfhj07nkip](https://canva.link/5t37iyfhj07nkip)
 
 Video Presentation:  
-TBD
+[https://youtu.be/AvymTUhoi_M?si=iV9SB1IiqFDPw7h4](https://youtu.be/AvymTUhoi_M?si=iV9SB1IiqFDPw7h4)
