@@ -174,9 +174,9 @@ The actual seven-screen journey connects an apparently free Wednesday slot to an
 
 ### 2.3 Mentor Consultation
 
-**Mentor Consultation: Not completed during the Prototype Phase. No mentor feedback is claimed.**
+**Mentor Consultation: Not completed during the Prototype Phase because the available mentor consultation schedule was already fully booked.**
 
-Available mentorship slots were already full when the team attempted to arrange a consultation. Therefore, this submission does not attribute any design or product decisions to mentor feedback.
+The team attempted to arrange a mentor consultation, but all available slots had already been filled before we could secure one. As a result, we were unable to complete a mentor session within the Prototype Phase timeline, and no mentor feedback is claimed or attributed to the project.
 
 ## 3. Design & Prototype
 
@@ -540,7 +540,7 @@ Prototype Phase:
 - GitHub repository: Complete
 - Public deployment: Complete
 - Ideation board images: Complete
-- Mentor consultation: Not completed during the Prototype Phase; no mentor feedback claimed
+- Mentor consultation: Not completed — available mentor schedule was fully booked before the team could secure a slot
 - Presentation slides: Complete
 - Video: Complete
 
